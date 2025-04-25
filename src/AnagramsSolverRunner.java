@@ -52,6 +52,7 @@ public class AnagramsSolverRunner {
 	
 	
 	public static void main(String[] args) {
+		System.out.println("hello world");
 		Scanner scanner= new Scanner(System.in);
 		System.out.print("Please enter a string of letters containing 1 through 9 letters: ");
 		String temp= scanner.next();
