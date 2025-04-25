@@ -3,7 +3,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.TreeSet;
 import java.util.Set;
 
@@ -80,10 +79,8 @@ public class OxfordDictionaryFilter {
 	
 	public static void main(String[] args) throws IOException {
 		OxfordDictionaryFilter test= new OxfordDictionaryFilter();
-		int i=0;
 		for(String s: test.setOfWords) {
 			System.out.println(s);
-			i++;
 		}
 		System.out.println("Word Count: " + test.wrdCnt);
 	}

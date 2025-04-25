@@ -1,10 +1,21 @@
+import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.Scanner;
 
 public class AnagramsSolverRunner {
-	static MateusAnagramDictionaryFilter temp= new MateusAnagramDictionaryFilter();
+	static MateusAnagramDictionaryFilter temp;
+	static {
+		try {
+			temp = new MateusAnagramDictionaryFilter();
+		} catch (IOException e) {
+			System.out.println("Error loading dictionary: " + e.getMessage());
+			e.printStackTrace(); // Optional: helps you debug
+			System.exit(1); // Optional: exits the program since dictionary is essential
+		}
+	}	
+
 	Set<String> everyPossibleWordInDictionary= temp.setOfWords;
 	Set<String> possibleWordsFromUserLetters= new LinkedHashSet<>();
 	Set<String> realSet= new TreeSet<>();
@@ -52,7 +63,6 @@ public class AnagramsSolverRunner {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("hello world");
 		Scanner scanner= new Scanner(System.in);
 		System.out.print("Please enter a string of letters containing 1 through 9 letters: ");
 		String temp= scanner.next();

@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class PossibleInputedWords {
-	Set<String> setOfPossibleABCOrderWords = new HashSet<>();//change to new HashSet later
+	Set<String> setOfPossibleABCOrderWords = new HashSet<>();
 	
 	String sixWordsFromUser[];
 	String numEquivalent[];
